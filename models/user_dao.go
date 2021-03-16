@@ -13,12 +13,13 @@ var (
 	}
 )
 
-func GetUser(userId int64) (*User, *utils.ApplicationError) {
-	if user := users[userId]; user != nil {
+// GetUser retrieve data of specified user by id
+func GetUser(userID int64) (*User, *utils.ApplicationError) {
+	if user := users[userID]; user != nil {
 		return user, nil
 	}
 	return nil, &utils.ApplicationError{
-		Message:    fmt.Sprintf("user %v was not found", userId),
+		Message:    fmt.Sprintf("user %v was not found", userID),
 		StatusCode: http.StatusNotFound,
 		Code:       "not_found",
 	}
