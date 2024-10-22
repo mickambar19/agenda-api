@@ -29,7 +29,7 @@ func TestGetUserFound(t *testing.T) {
 	assert.NotNil(t, user)
 
 	assert.EqualValues(t, 123, user.ID)
-	assert.EqualValues(t, "Alex", user.FirstName)
-	assert.EqualValues(t, "Jimenez", user.LastName)
-	assert.EqualValues(t, "alex@yopmail.com", user.Email)
+	assert.EqualValues(t, "Tomas", user.FirstName)
+	assert.EqualValues(t, "Edison", user.LastName)
+	assert.EqualValues(t, "tedison@yopmail.com", user.Email)
 }
